@@ -1,35 +1,95 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>EscapeTogether Redirect</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Confirmation</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url("photo_backgournd.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background: #f4f4f4;
-      font-family: sans-serif;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
     }
-    button {
-      padding: 12px 24px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      background: #4CAF50;
+
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-img {
+      width: 220px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .confirm-button {
+      background: #5865F2; /* Discord фирменный */
       color: white;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      font-size: 1.5rem;
+      padding: 15px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-    button:hover {
-      background: #45a049;
+
+    .confirm-button:hover {
+      transform: scale(1.05);
+      background: #4752C4;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .logo-img {
+        width: 100px;
+      }
+
+      .confirm-button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <button onclick="window.location.href='escapetogether://discord-confirmation'">
-    Подтвердить через Discord
-  </button>
+  <div class="logo-container">
+    <img class="logo-img" src="icon1024.png" alt="The Escape: Together Logo">
+  </div>
+  <h1>The Escape: Together</h1>
+  <div class="button-container">
+    <a class="confirm-button" href="escapetogether://discord-confirmation">
+      Confirm Discord
+    </a>
+  </div>
 </body>
 </html>
